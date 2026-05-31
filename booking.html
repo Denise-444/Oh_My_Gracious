@@ -5,179 +5,378 @@
     <meta name="viewport" content="width=h, initial-scale=1.0">
     <title>Document</title>
 <style>
+body{
+        padding-top: 100px;
+    }
     ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    overflow: hidden;
-    position: fixed;
-     top: 0;
-    left: 0;
-    width: 100%;
-    background-image: url(soft-blurred-pink-and-beige-background-photo.jpg);
-}
-ul li{
-    float: right;
-    background-color: rgb(248, 191, 233);
-}
-ul li a{
-    display: block;
-    color: black;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    .navbar{
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100px;
+        align-items: center;
+        display: flex;
+        padding: 0 50px;
+        box-sizing: border-box;
+    }
+    ul li{
+        padding-left: 10px;
+        justify-content: flex-start;
+    }
+    ul li a{
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin: 10px;
+        font-size: x-large;
+        font-family: sans-serif;
+    }   
+    ul li a:hover{
+        background-color:rgb(238, 235, 238);
+    }
+
+h3{
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    margin: 10px;
-}   
-ul li a:hover{
-    background-color: rgb(220, 142, 199);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
 }
-        body{
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: 0%;
-        }
-        .container{
-            background-color: white;
-            
-            width: 500px;
-            height: 70%;
-            margin: auto;
-            margin-top: 200px;
-            box-shadow: wheat;
-            border-radius: 20px;
-            padding: 20px;
-        }
-        input[type="text"],
-        input[type="tel"],
-        input[type="email"]{
-            width: 100%;
-            font-size: 18px;
-        }
-        .open-btn {
-    background-color: #ff69b4;
-    color: white;
-    padding: 12px 20px;
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+}
+.container-info{
+        background-color:rgb(239, 211, 215);
+        width: 700px;
+        height: 38vh;
+        margin: auto;
+        margin-top: 200px;
+        box-shadow: wheat;
+        border-radius: 20px;
+        padding: 20px;
+        font-size: larger;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"]{
+        width: 100%;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 10px;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+form{
+    width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+h2{
+    text-align: center;
+    margin-bottom: 25px;
+}
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+select,
+input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+button{
+    width: 100%;
+    padding: 12px;
     border: none;
     border-radius: 8px;
+    font-size: 15px;
     cursor: pointer;
-    font-size: 16px;
 }
-.open-btn:hover {
-    background-color: #e0559f;
+#add-service{
+    margin-top: 20px;
+    background-color: #ebb6be;
+    color: white;
 }
-
-/* Modal background */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5); /* Dark overlay */
+#add-service:hover{
+    opacity: 0.9;
 }
-
-/* Modal content box */
-.modal-content {
-    background-color: white;
-    margin: 10% auto;
-    padding: 20px;
+#selected-services{
+    background-color: #fafafa;
     border-radius: 10px;
-    width: 400px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 1px solid #ddd;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-
-/* Close button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
+#selected-services h3{
+    margin: 0 0 15px 0;
 }
-.close:hover {
-    color: black;
+#service-list{
+   padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;
 }
-
-/* Service options */
-.service-option {
-    display: block;
+#service-list li{
     margin-bottom: 10px;
-    font-size: 18px;
 }
-input[type="checkbox"] {
-    transform: scale(1.3);
-    margin-right: 10px;
+button[type="submit"]{
+    margin-top: 25px;
+    background-color: black;
+    color: white;
 }
+button[type="submit"]:hover{
+    opacity: 0.9;
+    .logo img {
+        width: 100px;
+        height: auto;
+        display: block;
+    }
+}
+.logo img {
+        width: 100px;
+        height: auto;
+        display: block;
+    }
 </style>
 </head>
 <body background="soft-blurred-pink-and-beige-background-photo.jpg">
     <nav class="navbar">
+         <div class="logo">
+            <img src="edited-photo (1).png" alt="OMG LOGO">
+        </div>
         <ul>
             <li><a href="About.html">About</a></li>
             <li><a href="Contact.html">Contact</a></li>
             <li><a href="booking.html">Book</a></li>
             <li><a href="index.html">Home</a></li>   
         </ul>
-        <div class="container">
-            <h3>Personal Information</h3>
-            <label for="name">Full Name*</label>
-            <br>
-            <input type="text" id="name" placeholder="Enter Full Name" required>
-            <br>
-            <br>
-            <label for="number">Phone Number*</label>
-            <br>
-            <input type="tel" id="number" placeholder="09xxxxxxxxx" required>
-            <br>
-            <br>
-            <label for="email">Email Address</label>
-            <br>
-            <input type="email" id="email" placeholder="your@email.com">
-            </div>
+        </nav>
+        <form>
+            <h2>Book an Appointment</h2>
+            <label>Category</label>
+            <select id="category">
+                <option value="lash-and-brows">Lash and Brows</option>
+                <option value="nail-art-per-nail">Nail Art</option>
+                <option value="nail-services-per-nail">Nail Services</option>
+                <option value="korean-head-spa">Korean Head Spa</option>
+                <option value="premium-hair-color">Premium Hair Color</option>
+                <option value="premium-treatment">Premium Treatment</option>
+                <option value="affordable-price-list">Affordablr Price List</option>
+                <option value="best-seller">Best Seller</option>
+            </select>
 
-            <button class="open-btn" onclick="openModal()">Select Services</button>
+            <label>Service</label>
+            <select id="service">
+                <option value="eyelash-style" data-category="lash-and-brows">EYELASH STYLE</option>
+                <option value="lash-and-brows-services" data-category="lash-and-brows">Lash and Brows Services</option>
+                <option value="nail-art" data-category="nail-art-per-nail">Nail Art Price List (Per Nail)</option>
+                <option value="nail-services" data-category="nail-art-per-nail">Nail Services Price List</option>
+                <option value="other-services" data-category="nail-services-per-nail">Other Services</option>
+                <option value="removal-with-cleaning" data-category="nail-services-per-nail">Removal with Cleaning</option>
+                <option value="scalp-and-hair-treatment" data-category="korean-head-spa">Scalp and Hair Treatment</option>
+                <option value="fashion-color" data-category="premium-hair-color">Fashion Color</option>
+                <option value="zero-amonia" data-category="premium-hair-color">Zero Amonia</option>
+                <option value="rebonding-color" data-category="premium-hair-color">Rebonding Color</option>
+                <option value="balayage" data-category="premium-hair-color">Balayage</option>
+                <option value="cysteine" data-category="premium-treatment">Cysteine</option>
+                <option value="metal-dx-loreal" data-category="premium-treatment">Metal DX Loreal</option>
+                <option value="absolute-repair-molecular" data-category="premium-treatment">Absolute Repair Molecular</option>
+                <option value="collagen" data-category="premium-treatment">Collagen</option>
+                <option value="wonder-smooth" data-category="premium-treatment">Wonder Smooth</option>
+                <option value="power-duo-cysteine" data-category="premium-treatment">Power Duo Cysteine</option>
+                <option value="affordable-services" data-category="affordable-price-list" selected>Afordable Services</option>
+                <option value="best-seller-package" data-category="best-seller" selected>Best Seller Package</option>
+            </select>
+            
+            <label>Option</label>
+            <select id="option">
+                <option value="classic" data-service="eyelash-style">Classic - ₱599</option>
+                <option value="hybrid" data-service="eyelash-style">Hybrid - ₱649</option>
+                <option value="cat-eye-lash" data-service="eyelash-style">Cat-eye - ₱649</option>
+                <option value="wispy" data-service="eyelash-style">Wispy - ₱649</option>
+                <option value="volume" data-service="eyelash-style">Volume - ₱699</option>
+                <option value="omg-signature" data-service="eyelash-style">OMG Signature - ₱749</option>
+                <option value="lash-extension-omg-signature" data-service="lash-and-brows-services">Lash Extenion OMG Signature - ₱749</option>
+                <option value="lash-lift" data-service="lash-and-brows-services"> Lash Lift - ₱400</option>
+                <option value="lash-lift-with-tint" data-service="lash-and-brows-services">Lash Lift with Tint - ₱600</option>
+                <option value="brow-laminate" data-service="lash-and-brows-services"> Brow Laminate - ₱400</option>
+                <option value="brow-laminate-with-tint" data-service="lash-and-brows-services">Brow Laminate with Tint - ₱650</option>
+                <option value="threading" data-service="lash-and-brows-services">Threading - ₱199</option>
+                <option value="lash-refill" data-service="lash-and-brows-services">Lash Refill - ₱150-299</option>
+                <option value="lash-removal" data-service="lash-and-brows-services">Lash Removal - ₱150</option>
+                <option value="full-chrome" data-service="nail-art">Full Chrome - ₱100</option>
+                <option value="any-design-with chrome" data-service="nail-art">Any Design With Chrome - ₱100</option>
+                <option value="french-tip" data-service="nail-art">French Tip - ₱50</option>
+                <option value="cat-eye-nail" data-service="nail-art">Cat Eye - ₱50</option>
+                <option value="embose" data-service="nail-art">Embose - ₱50</option>
+                <option value="ombre" data-service="nail-art">Ombre - ₱50</option>
+                <option value="marble" data-service="nail-art">Marble - ₱50</option>
+                <option value="blooming-gel-art" data-service="nail-art">Blooming Gel Art - ₱50</option>
+                <option value="glitters-design" data-service="nail-art">Glitter Design - ₱50</option>
+                <option value="hand-drawn-art" data-service="nail-art">Hand Drawn Art - ₱50</option>
+                <option value="3d-design" data-service="nail-art">3D Design - ₱50</option>
+                <option value="simple-line" data-service="nail-art">Simple Line - ₱30</option>
+                <option value="charms" data-service="nail-art">Charms - ₱15</option>
+                <option value="rhinestone" data-service="nail-art">Rhinestone - ₱10</option>
+                <option value="sticker" data-service="nail-art">Sticker - ₱15</option>
+                <option value="ultimate-manicure" data-service="nail-services">Ultimate Manicure - ₱199</option>
+                <option value="ultimate-pedicure" data-service="nail-services">Ultimate Pedicure - ₱249</option>
+                <option value="gel-manicure" data-service="nail-services">Gel Manicure - ₱599</option>
+                <option value="gel-pedicure" data-service="nail-services">Gel Pedicure - ₱749</option>
+                <option value="soft-gel-manicure" data-service="nail-services">Soft Gel Manicure - ₱999</option>
+                <option value="soft-gel-pedicure" data-service="nail-services">Soft Gel Pedicure - ₱1249</option>
+                <option value="poly-gel-extension" data-service="nail-services">Poly Gel Extension - ₱1499</option>
+                <option value="hand-spa" data-service="nail-services">Hand Spa - ₱349</option>
+                <option value="foot-spa" data-service="nail-services">Foot Spa - ₱499</option>
+                <option value="paraffin-wax" data-service="nail-services">Paraffin Wax - ₱299</option>
+                <option value="full-refill" data-service="other-services">Full Refill - ₱499</option>
+                <option value="repair/refill-per-nail" data-service="other-services">Repair/Refill Per Nail - ₱100</option>
+                <option value="gel" data-service="removal-with-cleaning">Gel - ₱250</option>
+                <option value="gel-omg-work" data-service="removal-with-cleaning">Gel(OMG Work) - ₱120</option>
+                <option value="nail-extension" data-service="removal-with-cleaning">Nail Extension - ₱450</option>
+                <option value="nail-extension-omg-work" data-service="removal-with-cleaning">Nail Extension(OMG Work) - ₱200</option>
+                <option value="short-hair" data-service="scalp-and-hair-treatment">short - ₱3500</option>
+                <option value="medium-hair" data-service="scalp-and-hair-treatment">medium - ₱4000</option>
+                <option value="long-hair" data-service="scalp-and-hair-treatment">Long - ₱4500</option>
+                <option value="short-fashion-color" data-service="fashion-color">Short - ₱1500</option>
+                <option value="medium-fashion-color" data-service="fashion-color">Medium - ₱2000</option>
+                <option value="long-fashion-color" data-service="fashion-color">Long - ₱2500</option>
+                <option value="short-zero-amonia" data-service="zero-amonia">Short - ₱2000</option>
+                <option value="medium-zero-amonia" data-service="zero-amonia">Medium - ₱2500</option>
+                <option value="long-zero-amonia" data-service="zero-amonia">Long - ₱3000</option>
+                <option value="short-rebond" data-service="rebonding-color">short - ₱2000</option>
+                <option value="medium-rebond" data-service="rebonding-color">Medium - ₱2500</option>
+                <option value="long-rebond" data-service="rebonding-color">Long - ₱3000</option>
+                <option value="short-balayage" data-service="balayage">Short - ₱4000</option>
+                <option value="medium-balayage" data-service="balayage">Medium - ₱5000</option>
+                <option value="long-balayage" data-service="balayage">Long - ₱6000</option>
+                <option value="short-cysteine" data-service="cysteine">Short - ₱2500</option>
+                <option value="medium-cystiene" data-service="cysteine">Medium - ₱3000</option>
+                <option value="long-cysteine" data-service="cysteine">Long - ₱3500</option>
+                <option value="short-loreal" data-service="metal-dx-loreal">Short - ₱1500</option>
+                <option value="medium-loreal" data-service="metal-dx-loreal">Medium - ₱2000</option>
+                <option value="long-loreal" data-service="metal-dx-loreal">Long - ₱2500</option>
+                <option value="short-repair" data-service="absolute-repair-molecular">Short - ₱2500</option>
+                <option value="medium-repair" data-service="absolute-repair-molecular">Medium - ₱3000</option>
+                <option value="long-repair" data-service="absolute-repair-molecular">Long - ₱3500</option>
+                <option value="short-collagen" data-service="collagen">Short - ₱2000</option>
+                <option value="medium-collagen" data-service="collagen">Medium - ₱2500</option>
+                <option value="long-collagen" data-service="collagen">Long - ₱3000</option>
+                <option value="short-wonder" data-service="wonder-smooth">Short - ₱2000</option>
+                <option value="medium-wonder" data-service="wonder-smooth">Medium - ₱2500</option>
+                <option value="long-wonder" data-service="wonder-smooth">Long - ₱3000</option>
+                <option value="collagen-duo" data-service="power-duo-cysteine">Collagen - ₱1500-2000</option>
+                <option value="wonder-smooth-duo" data-service="power-duo-cysteine">Wonder Smooth - ₱1500-2000</option>
+                <option value="haircut" data-service="affordable-services">Haircut - ₱300</option>
+                <option value="shampoo-blowdry" data-service="affordable-services">Shampoo, Blowdry - ₱250</option>
+                <option value="roots" data-service="affordable-services">Roots - ₱800</option>
+                <option value="brazilian" data-service="affordable-services">Brazillian - ₱1500</option>
+                <option value="basic-hair-color" data-service="affordable-services">Basic Hair Color - ₱1000</option>
+                <option value="highlights" data-service="affordable-services">Highlights - ₱1500</option>
+                <option value="hair-rebond" data-service="affordable-services">Hair Rebond - ₱1500</option>
+                <option value="streaks" data-service="affordable-services">Streaks - ₱800</option>
+                <option value="fashion-color-affordable" data-service="affordable-services">Fashion Color - ₱2500</option>
+                <option value="balayage-affordable" data-service="affordable-services">Balayage - ₱3000</option>
+                <option value="korean-perm" data-service="affordable-services">Korean Perm - ₱3500</option>
+                <option value="rebond-loreal" data-service="affordable-services">Rebond Loreal - ₱600</option>
+                <option value="aquatic-head-spa" data-service="best-seller-package">Aquatic Head Spa - ₱999</option>
+                <option value="head-spa-scalp-treatment" data-service="best-seller-package">Korean Head Spa and Scalp Treatment - ₱3700-4500</option>
 
+            </select>
 
-    <div id="serviceModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Select Services</h2>
-    <label class="service-option">
-        <input type="checkbox" value="Haircut"> Haircut
-    </label>
-    <label class="service-option">
-        <input type="checkbox" value="Manicure"> Manicure
-    </label>
-    <label class="service-option">
-        <input type="checkbox" value="Massage"> Massage
-    </label>
-    <label class="service-option">
-        <input type="checkbox" value="Facial"> Facial
-    </label>
-    <br>
-    <button class="open-btn" onclick="closeModal()">Done</button>
-  </div>
-    </div>
+            <input type="text" placeholder="Full Name">
+            <input type="tel" placeholder="Phone number">
+            <input type="date">
+            <input type="time">
 
-<script>
-function openModal() {
-    document.getElementById("serviceModal").style.display = "block";
-}
-function closeModal() {
-    document.getElementById("serviceModal").style.display = "none";
-}
+            <button type="button" id="add-service"> Add Service</button>
+<div id="selected-services">
+    <h3>Selected Services</h3>
+    <ul id="service-list"></ul>
+</div>
 
-// Close modal if user clicks outside the box
-window.onclick = function(event) {
-    let modal = document.getElementById("serviceModal");
-    if (event.target == modal) {
-        modal.style.display = "none";
+            <button type="submit">Book Now</button>
+        </form>
+        <script>
+
+const addServiceBtn = document.getElementById("add-service");
+const optionSelect = document.getElementById("option");
+const serviceList = document.getElementById("service-list");
+
+addServiceBtn.addEventListener("click", function () {   
+
+    const selectedOption =
+        optionSelect.options[optionSelect.selectedIndex];
+
+    const serviceText = selectedOption.text;
+
+    const li = document.createElement("li");
+
+    li.textContent = serviceText;
+
+    serviceList.appendChild(li);
+
+});
+
+category.addEventListener("change", function () {
+    const selectedCategory = category.value;
+
+    for (let i = 0; i < service.options.length; i++) {
+        const opt = service.options[i];
+        const match = opt.getAttribute("data-category");
+
+        if (!match || match === selectedCategory) {
+            opt.hidden = false;
+        } else {
+            opt.hidden = true;
+        }
     }
-}
-</script>
 
+    service.selectedIndex = 0;
+    service.dispatchEvent(new Event("change"));
+});
+service.addEventListener("change", function () {
+    const selectedService = service.value;
+
+    for (let i = 0; i < option.options.length; i++) {
+        const opt = option.options[i];
+        const match = opt.getAttribute("data-service");
+
+        if (!match || match === selectedService) {
+            opt.hidden = false;
+        } else {
+            opt.hidden = true;
+        }
+    }
+
+    option.selectedIndex = 0;
+});
+
+</script>
 </body>
 </html>
