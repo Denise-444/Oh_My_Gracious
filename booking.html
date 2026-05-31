@@ -67,100 +67,80 @@ body{
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
 }
-
 form{
     width: 400px;
     margin: 40px auto;
     padding: 25px;
-
     background-color: white;
-
     border-radius: 15px;
-
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
 h2{
     text-align: center;
     margin-bottom: 25px;
 }
-
 label{
     display: block;
     margin-top: 15px;
     margin-bottom: 5px;
-
     font-weight: bold;
 }
-
 select,
 input{
     width: 100%;
     padding: 12px;
-
     border: 1px solid #ccc;
     border-radius: 8px;
-
     font-size: 15px;
-
     box-sizing: border-box;
 }
-
 button{
     width: 100%;
     padding: 12px;
-
     border: none;
     border-radius: 8px;
-
     font-size: 15px;
     cursor: pointer;
 }
-
 #add-service{
     margin-top: 20px;
-
-    background-color: #ffb6c1;
+    background-color: #ebb6be;
     color: white;
 }
-
 #add-service:hover{
     opacity: 0.9;
 }
-
 #selected-services{
-    margin-top: 25px;
-    padding: 15px;
-
     background-color: #fafafa;
-
     border-radius: 10px;
     border: 1px solid #ddd;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-
 #selected-services h3{
+    margin: 0 0 15px 0;
+}
+#service-list{
+   padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;
+}
+#service-list li{
     margin-bottom: 10px;
 }
-
-#service-list{
-    padding-left: 20px;
-}
-
-#service-list li{
-    margin-bottom: 8px;
-}
-
 button[type="submit"]{
     margin-top: 25px;
-
     background-color: black;
     color: white;
 }
-
 button[type="submit"]:hover{
     opacity: 0.9;
 }
-
 </style>
 </head>
 <body background="soft-blurred-pink-and-beige-background-photo.jpg">
@@ -310,15 +290,11 @@ button[type="submit"]:hover{
             <input type="date">
             <input type="time">
 
-            <button type="button" id="add-service">
-    Add Service
-</button>
+            <button type="button" id="add-service"> Add Service</button>
 <div id="selected-services">
     <h3>Selected Services</h3>
-
     <ul id="service-list"></ul>
 </div>
-
 
             <button type="submit">Book Now</button>
         </form>
@@ -328,7 +304,7 @@ const addServiceBtn = document.getElementById("add-service");
 const optionSelect = document.getElementById("option");
 const serviceList = document.getElementById("service-list");
 
-addServiceBtn.addEventListener("click", function () {
+addServiceBtn.addEventListener("click", function () {   
 
     const selectedOption =
         optionSelect.options[optionSelect.selectedIndex];
